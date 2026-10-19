@@ -1,0 +1,19 @@
+name: Compilar APK de Valdoria
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Mostrar archivos
+        run: |
+          echo "Archivos del repositorio:"
+          ls -la
+          echo "Buscando proyecto Android..."
+          find . -maxdepth 4 -type f | head -100￼Enter
